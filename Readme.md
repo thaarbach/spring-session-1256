@@ -1,4 +1,4 @@
-# Demonstrator for #1256
+# Demonstrator for [#1256](https://github.com/spring-projects/spring-session/issues/1256)
 This demonstrator is based on spring-session-samples/spring-session-sample-boot-redis-json
  
 The test classes will demonstrate serialization issues when `GenericJackson2JsonRedisSerializer` is used in combination with common Spring Beans (e.g. DestructionCallbackBindingListener). 
