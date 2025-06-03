@@ -41,7 +41,7 @@ public class HomeController {
 	public String setValue(@RequestParam(name = "key", required = false) String key,
 						   @RequestParam(name = "value", required = false) String value, HttpServletRequest request, Model model) {
 		if (!ObjectUtils.isEmpty(key) && !ObjectUtils.isEmpty(value)) {
-			request.getSession().setAttribute(key, value);
+			request.getSession(false).setAttribute(key, value);
 			sessionScopedBean.setSomeValue(key, value);
 		}
 		model.addAttribute("sessionAttributeNames", Collections.list(request.getSession().getAttributeNames()));

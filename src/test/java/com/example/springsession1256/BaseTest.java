@@ -90,8 +90,11 @@ public abstract class BaseTest {
 		assertThat(capturedOutput.getOut()).contains("####################### Session created #######################");
 		assertThat(capturedOutput.getOut()).contains("################################### SessionScopedBean - added value ###################################");
 		assertThat(capturedOutput.getOut()).contains("################################### SessionScopedBean - added value ###################################");
-		assertThat(capturedOutput.getOut()).contains("################################### SessionScopedBean - PreDestroy ###################################");
-		home.logout();
 
+		final HomePage logout = home.logout();
+
+		assertThat(logout).isNotNull();
+
+		assertThat(capturedOutput.getOut()).contains("################################### SessionScopedBean - PreDestroy ###################################");
 	}
 }

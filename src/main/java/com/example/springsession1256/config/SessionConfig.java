@@ -39,7 +39,6 @@ import org.springframework.web.context.request.DestructionCallbackBindingListene
 public class SessionConfig implements BeanClassLoaderAware {
 
 	private ClassLoader loader;
-
 	/**
 	 * Using the JdkSerializationRedisSerializer will work without serialization errors but the @PreDestroy
 	 * annotated method in {@link SessionScopedBean} is not invoked
